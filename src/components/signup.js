@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../style/main.css"
+const host = process.env.REACT_APP_HOST;
 const Signup = (props) => {
-  const host = process.env.REACT_APP_API_HOST;
   const [Credentials, setCredentials] = useState({
     name: "",
     email: "",
@@ -24,25 +24,32 @@ const Signup = (props) => {
   let history = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    const { name, email, password } = Credentials;
-    const response = await fetch(`${host}/api/auth/createuser`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ name, email, password }),
-    });
-    const state = await response.json();
-    console.log(state);
-    if(state.success){
-      localStorage.setItem("token", state.authtoken);
-      history("/");
-      props.showAlert("Signup Successfull","success")
-    }else{
-      props.showAlert(state.error,"danger")
+    if(Credentials.cpassword!==Credentials.password){
+      props.showAlert("Password does not match","danger")
+       e.preventDefault();
     }
-  };
+    else{
+
+      e.preventDefault();
+      const { name, email, password } = Credentials;
+      const response = await fetch(`${host}/api/auth/createuser`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ name, email, password }),
+      });
+      const state = await response.json();
+      console.log(state);
+      if(state.success){
+        localStorage.setItem("token", state.authtoken);
+        history("/");
+        props.showAlert("Signup Successfull","success")
+      }else{
+        props.showAlert(state.error,"danger")
+      }
+    }
+    };
   return (
     <div className="signup">
       <h1>Signup</h1>
@@ -78,7 +85,6 @@ const Signup = (props) => {
             Password
           </label>
           <input
-            // value = {Credentials.password}
             name="password"
             type={showpass ? "text" : "password"}
             className="form-control"

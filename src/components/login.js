@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../style/main.css"
-const host = process.env.REACT_APP_API_HOST;
+const host = process.env.REACT_APP_HOST;
 
 
 const Login = (props) => {
