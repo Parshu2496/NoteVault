@@ -1,0 +1,60 @@
+body{
+    background-image: radial-gradient( circle farthest-corner at 50% 52.5%,  rgba(14,53,92,1) 0%, rgba(16,14,72,1) 90% );
+}
+.login{
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    margin: 10%;
+    justify-self: center;
+
+}
+.signup{
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 50%;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    margin: 10%;
+    justify-self: center; 
+
+}
+.About {
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+}
+.Notes{
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 2%;
+    margin: 5%;
+}
+.notes{
+   background-image: linear-gradient( 179.1deg,  rgba(255,250,172,1) 10.3%, rgba(13,167,168,1) 148% );
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.YourNotes{
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    border: 1px solid black;
+    /* display: flex;
+    flex-direction: column; */
+    border-radius: 5px;
+    padding: 3%;
+    margin: 5%;
+}
