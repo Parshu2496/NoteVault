@@ -34,7 +34,6 @@ router.post(
       const saveNote = await note.save();
       res.send(saveNote);
     } catch (error) {
-      console.log(error.message);
       res.status(400).json({ error: "Some error occured" });
     }
   },
@@ -63,7 +62,6 @@ router.put(
     note = await Note.findByIdAndUpdate(req.params.id,{$set:newnote},{new:true})
     res.json(note);
     } catch (error) {
-      console.log(error.message);
       res.status(400).json({ error: "Some error occured" });
     }
   },

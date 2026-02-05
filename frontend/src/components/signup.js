@@ -32,7 +32,7 @@ const Signup = (props) => {
 
       e.preventDefault();
       const { name, email, password } = Credentials;
-      const response = await fetch(`${host}/api/auth/createuser`, {
+      const response = await fetch(`${host}api/auth/createuser`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -40,7 +40,6 @@ const Signup = (props) => {
         body: JSON.stringify({ name, email, password }),
       });
       const state = await response.json();
-      console.log(state);
       if(state.success){
         localStorage.setItem("token", state.authtoken);
         history("/");

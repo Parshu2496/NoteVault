@@ -50,7 +50,6 @@ try {
     res.json({success, authtoken })
 
   } catch (error) {
-      console.log(error.message);
       res.status(400).json({ error: "Some error occured" });
     }
   },
@@ -92,7 +91,6 @@ router.post(
       success = true;
       res.json( {success,authToken} );
     } catch (error) {
-      console.log(error.message);
       res.status(400).send("Internal server error occured");
     }
   },
@@ -105,7 +103,6 @@ router.post("/getuser", fetchuser ,async (req, res) => {
     const user = await User.findById(userId).select("-password");
     res.json(user)
   } catch (error) {
-    console.log(error.message);
     res.status(500).send("Internal server error occured");
   }
 });
