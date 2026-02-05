@@ -11,7 +11,7 @@ const Notes = (props) => {
     if (localStorage.getItem("token")) {
       getnotes();
     } else {
-      history("/login");
+      history("/signup");
     }
     // eslint-disable-next-line
   }, []);
