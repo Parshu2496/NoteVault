@@ -13,7 +13,7 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
         <div className="container-fluid">
           <NavLink className="navbar-brand" to="/">
-            Inotebook
+            NoteVault
           </NavLink>
           <button
             className="navbar-toggler"

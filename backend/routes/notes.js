@@ -81,7 +81,6 @@ router.delete(
     const status = await note.deleteOne()
     res.json(status);
     } catch (error) {
-      console.log(error.message);
       res.status(400).json({ error: "Some error occured" });
     }
   },
