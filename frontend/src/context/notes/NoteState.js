@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import NoteContext from "./NoteContext";
-const host = process.env.REACT_APP_API_HOST;
+const host = process.env.REACT_APP_HOST;
 
 const NoteState = (props) => {
   const notesinitial = [];
