@@ -91,11 +91,13 @@ npm start
 
 ---
 ## 🌍 Live Deployment
+
 Frontend: [https://your-frontend.onrender.com](https://notevault-frontend-b5av.onrender.com)
 Backend API: [https://your-backend.onrender.com](https://notevault-backend-i4bi.onrender.com)
 
 ---
 ## 🧠 Learning Outcomes
+
 Built secure authentication using JWT
 Designed REST APIs with Express
 Used Context API for global state management
@@ -104,12 +106,14 @@ Deployed a full MERN app using Render
 
 ---
 ## 📌 Future Improvements
+
 Note search & filtering
 Pagination
 Token expiry & refresh tokens
 UI enhancements with animations
 
 ---
-👤 Author
+## 👤 Author
+
 Prashant Narwade
 Aspiring Software Engineer | MERN Stack Developer
